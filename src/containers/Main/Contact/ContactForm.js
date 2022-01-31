@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Form, Input, Button } from "antd";
 import styles from "./Contact.module.scss";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from "../Contact/redux/actions";
 
 const ContactForm = () => {
   const [dialCode, setDialCode] = useState(null);
+  const dispatch = useDispatch();
 
   const layout = {
     labelCol: {
@@ -15,7 +18,7 @@ const ContactForm = () => {
     },
   };
   const onFinish = (values) => {
-    console.log(values);
+    dispatch(actions.addContact(values));
   };
 
   const getGeoInfo = () => {
@@ -33,15 +36,13 @@ const ContactForm = () => {
     getGeoInfo();
   }, []);
 
+  const { contact } = useSelector((state) => state.contact);
+
   return (
     <div className={styles.contactFormContainer}>
       <h3>Find inbound call centers for your company</h3>
       <p>Use our AI and Big Data driven call center sourcing solution</p>
-      <Form
-        {...layout}
-        name="nest-messages"
-        onFinish={onFinish}
-      >
+      <Form {...layout} name="nest-messages" onFinish={onFinish}>
         <Form.Item
           name="Company"
           label="Company"
@@ -51,7 +52,7 @@ const ContactForm = () => {
             },
           ]}
         >
-          <Input placeholder="Company"/>
+          <Input placeholder="Company" />
         </Form.Item>
         <Form.Item
           name="Name"
@@ -62,7 +63,7 @@ const ContactForm = () => {
             },
           ]}
         >
-          <Input placeholder="Full Name"/>
+          <Input placeholder="Full Name" />
         </Form.Item>
         <Form.Item
           name="Phone"
@@ -91,7 +92,7 @@ const ContactForm = () => {
             },
           ]}
         >
-          <Input placeholder="name@email.com"/>
+          <Input placeholder="name@email.com" />
         </Form.Item>
         <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
           <Button type="primary" htmlType="submit">

@@ -1,7 +1,7 @@
 .container {
   img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     float: left;
   }
 }
@@ -12,5 +12,11 @@
   .ant-menu-item-disabled,
   .ant-menu-submenu-disabled {
     color: gray !important;
+  }
+  @media screen and (max-width: 600px) {
+    .ant-menu-overflow {
+        width: 100px;
+        float: right;
+    }
   }
 }
