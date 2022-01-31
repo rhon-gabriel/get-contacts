@@ -1,0 +1,11 @@
+.container {
+    height: 100vh;
+    background-color: #fff;
+}
+@media only screen and (max-width: 600px) {
+:global {
+    .ant-layout-footer {
+      display: none;
+    }
+  }
+}
