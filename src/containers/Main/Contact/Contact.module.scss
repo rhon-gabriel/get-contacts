@@ -1,6 +1,44 @@
 .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
   img {
     width: 100%;
     height: 100%;
+  }
+  .contactForm {
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    padding: 20px 40px;
+  }
+  .contactFormContainer {
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .contactInfo {
+    width: 60%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    h3, h2{
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    color: #fff;
   }
 }
