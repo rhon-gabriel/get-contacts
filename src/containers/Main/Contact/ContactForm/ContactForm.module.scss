@@ -1,0 +1,69 @@
+.contactFormContainer {
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  overflow: scroll;
+  padding: 10px;
+  text-align: center;
+  @media screen and (max-width: 992px) {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+    margin-bottom: 0;
+    @media screen and (max-width: 992px) {
+      font-size: 16px;
+    }
+  }
+}
+
+:global {
+  .ant-form {
+    padding-top: 20px;
+  }
+  .ant-col-offset-8 {
+    margin-left: auto;
+  }
+  .ant-form-item {
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+  .ant-form-item-explain-error {
+    display: none;
+  }
+  .ant-input {
+    border-radius: 8px;
+  }
+  .ant-input-group-addon {
+    color: rgb(170, 170, 170);
+    background-color: #fff;
+  }
+  .ant-input-group-addon:first-child {
+    border-right: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .ant-input-group > .ant-input:last-child,
+  .ant-input-group-addon:last-child {
+    border-left: none;
+  }
+  .ant-form-item-label
+    > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: none;
+  }
+  .ant-btn-primary {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu } from "antd";
 import styles from "./Header.module.scss";
-import { DownOutlined, MenuOutlined  } from "@ant-design/icons";
+import { DownOutlined, MenuOutlined } from "@ant-design/icons";
 
 const Header = () => {
   return (
@@ -13,18 +13,33 @@ const Header = () => {
         alt="icon"
       />
 
-      <Menu mode="horizontal"  breakpoint={"md"} collapsedWidth={20} overflowedIndicator={<MenuOutlined />}>
-        <Menu.Item disabled>About Us</Menu.Item>
-        <Menu.Item disabled>How it works</Menu.Item>
-        <Menu.Item disabled>How it works</Menu.Item>
-        <Menu.Item disabled>
+      <Menu
+        mode="horizontal"
+        breakpoint={"md"}
+        collapsedWidth={20}
+        overflowedIndicator={<MenuOutlined />}
+      >
+        <Menu.Item disabled key="1">
+          About Us
+        </Menu.Item>
+        <Menu.Item disabled key="2">
+          How it works
+        </Menu.Item>
+        <Menu.Item disabled key="3">
+          How it works
+        </Menu.Item>
+        <Menu.Item disabled key="4">
           Eur <DownOutlined />
         </Menu.Item>
-        <Menu.Item disabled>
+        <Menu.Item disabled key="5">
           En <DownOutlined />
         </Menu.Item>
-        <Menu.Item disabled>Sign In</Menu.Item>
-        <Menu.Item disabled>Get Access</Menu.Item>
+        <Menu.Item disabled key="6">
+          Sign In
+        </Menu.Item>
+        <Menu.Item disabled key="7">
+          Get Access
+        </Menu.Item>
       </Menu>
     </div>
   );

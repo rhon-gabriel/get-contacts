@@ -1,7 +1,7 @@
-import { createStore } from "redux";
-import rootReducer from "./rootReducer";
-import "regenerator-runtime/runtime";
+const axios = require("axios");
 
-const store = createStore(rootReducer);
-
-export default store;
+export const getDialCode = async () => {
+  const response = await axios.get("https://ipapi.co/json/");
+  const dialCode = response.data.country_calling_code;
+  return dialCode;
+};

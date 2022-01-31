@@ -1,16 +1,14 @@
-import {
-  ADD_CONTACT
-} from "./constants";
+import { ADD_CONTACT } from "./constants";
 
 const initialState = {
-  contact: null
+  contact: null,
 };
 
 export default function contactReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_CONTACT:
       return {
-        contact: action.payload
+        contact: action.payload,
       };
     default:
       return state;

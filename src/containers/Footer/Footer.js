@@ -1,21 +1,20 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import facebook from "../../assets/images/facebook.png";
+import twitter from "../../assets/images/twitter.png";
+import linkedin from "../../assets/images/linkedin.png";
 
 const Footer = () => {
   const list1 = ["About Us", "Become a Partner", "FAQ"];
   const list2 = ["Imprint", "Terms & Condition", "Privacy Policy"];
   const list3 = ["email@js.com", "+49 (0) 12345678"];
-  const icons = [
-    "https://cdn-icons-png.flaticon.com/512/1077/1077041.png",
-    "https://cdn-icons-png.flaticon.com/512/2111/2111819.png",
-    "https://cdn-icons-png.flaticon.com/512/220/220343.png",
-  ];
+  const icons = [facebook, twitter, linkedin];
 
   const vertList = (array) => {
     return (
       <div className={styles.column}>
-        {array.map((el) => {
-          return <p>{el}</p>;
+        {array.map((el, i) => {
+          return <p key={i}>{el}</p>;
         })}
       </div>
     );
@@ -28,8 +27,8 @@ const Footer = () => {
         {vertList(list3)}
       </div>
       <div>
-        {icons.map((el) => {
-          return <img src={el} alt="icon-social" />;
+        {icons.map((el, i) => {
+          return <img src={el} alt="icon-social" key={i} />;
         })}
       </div>
     </div>

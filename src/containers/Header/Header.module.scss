@@ -13,10 +13,16 @@
   .ant-menu-submenu-disabled {
     color: gray !important;
   }
-  @media screen and (max-width: 600px) {
+  .ant-menu-horizontal {
+    border-bottom: none;
+  }
+  @media screen and (max-width: 992px) {
     .ant-menu-overflow {
         width: 100px;
         float: right;
+    }
+    .ant-layout-header {
+        padding: 0 30px;
     }
   }
 }
