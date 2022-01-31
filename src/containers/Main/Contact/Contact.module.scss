@@ -30,7 +30,8 @@
     right: 0px;
     bottom: 0px;
     z-index: 1;
-    h3, h2{
+    h3,
+    h2 {
       font-weight: bold;
       color: #fff;
     }
@@ -40,5 +41,21 @@
     width: 25%;
     padding: 10px;
     color: #fff;
+  }
+}
+:global {
+  .ant-form-item-explain-error {
+    display: none;
+  }
+  .ant-input-group-addon {
+    color: rgb(170, 170, 170);
+    background-color: #fff;
+  }
+  .ant-input-group-addon:first-child {
+    border-right: none;
+  }
+  .ant-input-group > .ant-input:last-child,
+  .ant-input-group-addon:last-child {
+    border-left: none;
   }
 }
